@@ -116,7 +116,7 @@ if __name__ == '__main__':
             
         elif "open google" in query:
             speak('Sir, what should i search on google')
-            cm = takecommand().lower
+            cm = takecommand().lower()
             #cm = "Argentina"
             speak(f"Search with keyword {cm}")
             search_url = f"https://www.google.com/search?q={cm}"
