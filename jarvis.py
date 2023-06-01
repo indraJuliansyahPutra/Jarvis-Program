@@ -66,9 +66,9 @@ if __name__ == '__main__':
     wish()
     while True:
     #if 1:
-        #query = takecommand().lower()
-        query = "Jarvis, open command prompt please"
-        speak(query)
+        query = takecommand().lower()
+        #query = "Jarvis, open command prompt please"
+        #speak(query)
         
         if "open notepad" in query:
             npath = "C:\\Windows\\notepad.exe"
@@ -116,8 +116,8 @@ if __name__ == '__main__':
             
         elif "open google" in query:
             speak('Sir, what should i search on google')
-            #cm = takecommand().lower
-            cm = "Argentina"
+            cm = takecommand().lower
+            #cm = "Argentina"
             speak(f"Search with keyword {cm}")
             search_url = f"https://www.google.com/search?q={cm}"
             webbrowser.open(search_url)
@@ -127,9 +127,10 @@ if __name__ == '__main__':
             
         elif "play song on youtube" in query:
             speak("What song should i play on youtube....")
-            lagu = "Jejak Pesawat"
-            speak(f"{lagu} will play on youtube")
-            kit.playonyt(lagu)
+            #lagu = "Jejak Pesawat"
+            query = takecommand().lower()
+            speak(f"{query} will play on youtube")
+            kit.playonyt(query)
             
         elif "email to presiden" in query:
             try:
